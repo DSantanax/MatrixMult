@@ -1,16 +1,19 @@
 import java.util.Arrays;
+import java.util.Random;
 
 /**
- * TODO: Randomize Matrix A & B
+ * TODO: Testing
  * 
  */
 class Matrix {
     public static void main(String[] args) {
         // assume correct format mxn nxp = mxp
         // where n=n
-        int m = 5;
+        //set m n and p first
+        int m = 2;
         int n = 3;
-        int p = 4;
+        int p = 2;
+        Random rand = new Random();
 
         // [0].length column
         // .length row
@@ -20,8 +23,23 @@ class Matrix {
         // c can be the synchronized put
 
         // 5x2 3x4
-        float[][] a = { { 5, 2, 1 }, { 4, 5, 2 }, { 1, 2, 3 }, { 4, 5, 3 }, { 1, 2, 4 } };
-        float[][] b = { { 3, 4, 3, 4 }, { 6, 2, 3, 4 }, { 2, 2, 1, 7 } };
+        // float[][] a = { { 5, 2, 1 }, { 4, 5, 2 }, { 1, 2, 3 }, { 4, 5, 3 }, { 1, 2, 4 } };
+        // float[][] b = { { 3, 4, 3, 4 }, { 6, 2, 3, 4 }, { 2, 2, 1, 7 } };
+
+        //randomize arrays
+        float[][] a = new float[m][n];
+        float[][] b = new float[n][p];
+        
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                a[i][j] = rand.nextInt(1000);
+            }
+        }
+        for (int i = 0; i < b.length; i++) {
+            for (int j = 0; j < b[i].length; j++) {
+                b[i][j] = rand.nextInt(1000);
+            }
+        }
 
         float[][] c = new float[m][p];
         Sol solution = new Sol(c);
