@@ -10,9 +10,9 @@ class Matrix {
         // assume correct format mxn nxp = mxp
         // where n=n
         //set m n and p first
-        int m = 2;
-        int n = 3;
-        int p = 2;
+        int m = 5;
+        int n = 700;
+        int p = 900;
         Random rand = new Random();
 
         // [0].length column
